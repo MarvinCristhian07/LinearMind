@@ -1,4 +1,10 @@
+import os
 from src.core.entities.lesson import Lesson, Slide
+
+def get_asset_path(subpath):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_dir)))
+    return os.path.join(project_root, "assets", subpath)
 
 LESSON_1_ID = "aula_1_formacao"
 LESSON_2_ID = "aula_2_classificacao"
@@ -14,10 +20,20 @@ LESSONS_CONTENT = {
         id=LESSON_1_ID,
         title="1. Lei de Formação",
         slides=[
-            Slide(type="text", content={"text": "Bem-vindo(a) à Aula 1: Lei de Formação!\n\nUma função afim, também conhecida como função do 1° grau, é toda função f: R → R que pode ser escrita na forma:\n\nf(x) = ax + b"}),
-            Slide(type="text", content={"text": "Nesta fórmula:\n\n'a' é o Coeficiente Angular (define a inclinação da reta).\n'b' é o Coeficiente Linear (define onde a reta corta o eixo Y).\n\nAmbos 'a' e 'b' são números reais, e 'a' deve ser diferente de zero (a ≠ 0)."}),
-            Slide(type="text", content={"text": "Exemplo:\n\nSe f(x) = 2x + 3:\n\nO coeficiente angular 'a' é 2.\nO coeficiente linear 'b' é 3.\n\nSe f(x) = -x + 10:\n\nO coeficiente angular 'a' é -1.\nO coeficiente linear 'b' é 10."}),
-            Slide(type="text", content={"text": "Parabéns! Você concluiu a Aula 1.\n\nClique em 'Concluir' para desbloquear a próxima aula."})
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/1.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/2.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/3.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/4.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/5.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/6.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/7.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/8.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/9.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/10.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/11.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/12.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/13.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_01/14.png")}),
         ]
     ),
 

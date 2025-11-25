@@ -7,7 +7,7 @@ class UserProgress:
     completed_exercises: Set[str] = field(default_factory=set)
 
     def complete_lesson(self, lesson_id: str):
-        self.complete_lesson.add(lesson_id)
+        self.completed_lessons.add(lesson_id)
 
     def complete_exercise(self, exercise_id: str):
         self.completed_exercises.add(exercise_id)
