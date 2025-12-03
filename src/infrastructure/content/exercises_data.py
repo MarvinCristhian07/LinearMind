@@ -26,19 +26,19 @@ EXERCISES_CONTENT = {
     EX_F_1_ID: Exercise(
         id=EX_F_1_ID,
         level="facil",
-        prompt="Dada a função f(x) = 3x - 6, calcule o valor de f(5).\n\nInsira sua resposta para f(5) no campo abaixo:",
+        prompt="Dada a função f(x) = 3x - 4, calcule o valor de f(5).\n\nInsira sua resposta para f(5) no campo abaixo:",
         inputs={"f(5)": "float"}, # O input que o aluno deve preencher
-        answers={"f(5)": 9.0},     # A resposta correta
-        ai_context="O aluno está calculando f(5) para a função f(x) = 3x - 6. A resposta correta é 9. O cálculo é 3 * 5 - 6. O erro provável é na substituição do X ou na operação 15 - 6."
+        answers={"f(5)": 11},     # A resposta correta
+        ai_context="O aluno está calculando f(5) para a função f(x) = 3x - 4. A resposta correta é 11. O cálculo esperado é 3 * 5 - 4 = 15 - 4 = 11."
     ),
     
     EX_F_2_ID: Exercise(
         id=EX_F_2_ID,
         level="facil",
-        prompt="Dada a função f(x) = -x + 4, encontre o 'zero da função' (o valor de x para o qual f(x) = 0).\n\nInsira o valor de x:",
+        prompt="Observe a função f(x) = 2x + 15. Qual é o valor numérico do coeficiente linear (o termo independente b)?\n\nInsira o valor de x:",
         inputs={"x": "float"},
-        answers={"x": 4.0},
-        ai_context="O aluno está encontrando o zero da função f(x) = -x + 4. A resposta correta é x = 4. O cálculo é 0 = -x + 4, logo x = 4. O erro provável é na regra de sinal ao isolar o X."
+        answers={"x": 15},
+        ai_context="O aluno está encontrando o coeficiente linear (b) para a função f(x) = 2x + 15. A resposta correta é 15 (O aluno deve identificar o número que está sozinho)."
     ),
     
     # Preencher futuramente

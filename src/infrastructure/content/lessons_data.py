@@ -120,8 +120,48 @@ LESSONS_CONTENT = {
             Slide(type="image", content={"image_path": get_asset_path("slides/aula_05/15.png")}),
         ]
     ),
-    LESSON_6_ID: Lesson(id=LESSON_6_ID, title="6. Obtenção da Lei de Formação", slides=[Slide(type="text", content={"text": "Conteúdo da Aula 6..."})]),
-    LESSON_7_ID: Lesson(id=LESSON_7_ID, title="7. Casos Particulares", slides=[Slide(type="text", content={"text": "Conteúdo da Aula 7..."})]),
+    LESSON_6_ID: Lesson(
+        id=LESSON_6_ID, 
+        title="6. Obtenção da Lei de Formação", 
+        slides=[
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/1.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/2.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/3.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/4.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/5.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/6.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/7.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/8.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/9.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/10.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/11.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/12.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/13.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/14.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/15.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_06/16.png")}),
+        ]
+    ),
+    LESSON_7_ID: Lesson(
+        id=LESSON_7_ID, 
+        title="7. Casos Particulares", 
+        slides=[
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/1.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/2.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/3.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/4.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/5.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/6.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/7.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/8.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/9.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/10.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/11.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/12.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/13.png")}),
+            Slide(type="image", content={"image_path": get_asset_path("slides/aula_07/14.png")}),
+        ]
+    ),
 }
 
 LESSONS_ORDER = [
