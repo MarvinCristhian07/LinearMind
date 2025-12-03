@@ -35,16 +35,38 @@ EXERCISES_CONTENT = {
     EX_F_2_ID: Exercise(
         id=EX_F_2_ID,
         level="facil",
-        prompt="Observe a função f(x) = 2x + 15. Qual é o valor numérico do coeficiente linear (o termo independente b)?\n\nInsira o valor de x:",
-        inputs={"x": "float"},
-        answers={"x": 15},
+        prompt="Observe a função f(x) = 2x + 15. Qual é o valor numérico do coeficiente linear (o termo independente b)?\n\nInsira o valor de b:",
+        inputs={"b": "float"},
+        answers={"b": 15},
         ai_context="O aluno está encontrando o coeficiente linear (b) para a função f(x) = 2x + 15. A resposta correta é 15 (O aluno deve identificar o número que está sozinho)."
     ),
     
-    # Preencher futuramente
-    EX_F_3_ID: Exercise(id=EX_F_3_ID, level="facil", prompt="...", inputs={}, answers={}, ai_context="..."),
-    EX_F_4_ID: Exercise(id=EX_F_4_ID, level="facil", prompt="...", inputs={}, answers={}, ai_context="..."),
-    EX_F_5_ID: Exercise(id=EX_F_5_ID, level="facil", prompt="...", inputs={}, answers={}, ai_context="..."),
+    EX_F_3_ID: Exercise(
+        id=EX_F_3_ID,
+        level="facil",
+        prompt="Determine a raiz da função f(x) = 2x - 10.\n\nInsira o valor da raiz (x) no campo abaixo:",
+        inputs={"x": "float"},
+        answers={"x": 5},
+        ai_context="O aluno está calculando a raiz da função f(x) = 2x - 10. A resposta correta é 5. O cálculo esperado é igualar a zero: 2x - 10 = 0 -> 2x = 10 -> x = 5."
+    ),
+
+    EX_F_4_ID: Exercise(
+        id=EX_F_4_ID,
+        level="facil",
+        prompt="Um motorista cobra uma taxa fixa de R$ 5,00 mais R$ 2,00 por quilômetro rodado. Se a corrida tiver exatamente 10 km, qual será o valor final a pagar?\n\nInsira o valor final:",
+        inputs={"valor": "float"},
+        answers={"valor": 25},
+        ai_context="O aluno está aplicando a função em um contexto real. O cálculo é 5 (fixo) + 2 * 10 (km) = 5 + 20 = 25. A resposta correta é 25."
+    ),
+
+    EX_F_5_ID: Exercise(
+        id=EX_F_5_ID,
+        level="facil",
+        prompt="Na função f(x) = 12 - 4x, qual é o valor do coeficiente angular (a)?\n\nInsira o valor de a:",
+        inputs={"a": "float"},
+        answers={"a": -4},
+        ai_context="O aluno deve identificar o coeficiente angular (a) na função f(x) = 12 - 4x. A resposta correta é -4. O aluno deve notar que a ordem está invertida e o 'a' é o termo que multiplica o x."
+    ),
 
     
     # Nível Médio
