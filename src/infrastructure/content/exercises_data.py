@@ -93,7 +93,8 @@ EXERCISES_CONTENT = {
         prompt="Observe o gráfico acima. Ele corta o eixo Y em 4 e o eixo X em -2. Calcule o valor do coeficiente angular (a) dessa função.", 
         inputs={"a": "float"}, 
         answers={"a": 2}, 
-        ai_context="O aluno deve interpretar o gráfico para achar a lei de formação. O corte em Y indica que b = 4. O corte em X indica que a raiz é -2. Substituindo na equação (0 = a*(-2) + 4), temos 2a = 4, logo a = 2. A resposta correta é 2."
+        ai_context="O aluno deve interpretar o gráfico para achar a lei de formação. O corte em Y indica que b = 4. O corte em X indica que a raiz é -2. Substituindo na equação (0 = a*(-2) + 4), temos 2a = 4, logo a = 2. A resposta correta é 2.",
+        image_path=get_asset_path("exercises/medium/m1.png")
     ),
     
     EX_M_3_ID: Exercise(
@@ -111,7 +112,8 @@ EXERCISES_CONTENT = {
         prompt="O gráfico mostra o nível de água de um tanque. Ele começa no 10 e chega a zero no tempo 5. Baseado nesse gráfico, qual seria o nível da água no tempo x = 2?", 
         inputs={}, 
         answers={}, 
-        ai_context="O aluno deve primeiro deduzir a função pelo gráfico: b=10 (início) e raiz=5 (fim), logo a = -2 (f(x) = -2x + 10). Em seguida, deve calcular f(2): -2 * 2 + 10 = -4 + 10 = 6. A resposta correta é 6."
+        ai_context="O aluno deve primeiro deduzir a função pelo gráfico: b=10 (início) e raiz=5 (fim), logo a = -2 (f(x) = -2x + 10). Em seguida, deve calcular f(2): -2 * 2 + 10 = -4 + 10 = 6. A resposta correta é 6.",
+        image_path=get_asset_path("exercises/medium/m2.png")
     ),
 
     EX_M_5_ID: Exercise(
