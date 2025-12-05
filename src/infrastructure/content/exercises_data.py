@@ -109,9 +109,9 @@ EXERCISES_CONTENT = {
     EX_M_4_ID: Exercise(
         id=EX_M_4_ID, 
         level="medio", 
-        prompt="O gráfico mostra o nível de água de um tanque. Ele começa no 10 e chega a zero no tempo 5. Baseado nesse gráfico, qual seria o nível da água no tempo x = 2?", 
-        inputs={}, 
-        answers={}, 
+        prompt="O gráfico mostra o nível de água de um tanque. Ele começa no 10 e chega a zero no tempo 5. Baseado nesse gráfico, qual seria o nível da água no tempo x = 2?",
+        inputs={"Nível": "float"}, 
+        answers={"Nível": 6}, 
         ai_context="O aluno deve primeiro deduzir a função pelo gráfico: b=10 (início) e raiz=5 (fim), logo a = -2 (f(x) = -2x + 10). Em seguida, deve calcular f(2): -2 * 2 + 10 = -4 + 10 = 6. A resposta correta é 6.",
         image_path=get_asset_path("exercises/medium/m2.png")
     ),
@@ -119,20 +119,61 @@ EXERCISES_CONTENT = {
     EX_M_5_ID: Exercise(
         id=EX_M_5_ID, 
         level="medio", 
-        prompt="...", 
-        inputs={}, 
-        answers={}, 
+        prompt="Considere a função de lucro L(x) = 4x - 24. A partir de qual quantidade vendida (x) o lucro deixa de ser negativo e passa a ser zero (ponto de equilíbrio)?", 
+        inputs={"x": "float"}, 
+        answers={"x": 6}, 
         ai_context="O exercício pede o ponto onde o lucro deixa de ser negativo, ou seja, a raiz da função (onde zera). O aluno deve resolver 4x - 24 = 0. 4x = 24 -> x = 6. A resposta correta é 6."
     ),
 
     # Nível Difícil
 
     # Preencher futuramente
-    EX_D_1_ID: Exercise(id=EX_D_2_ID, level="dificil", prompt="...", inputs={}, answers={}, ai_context="..."),
-    EX_D_2_ID: Exercise(id=EX_D_2_ID, level="dificil", prompt="...", inputs={}, answers={}, ai_context="..."),
-    EX_D_3_ID: Exercise(id=EX_D_3_ID, level="dificil", prompt="...", inputs={}, answers={}, ai_context="..."),
-    EX_D_4_ID: Exercise(id=EX_D_4_ID, level="dificil", prompt="...", inputs={}, answers={}, ai_context="..."),
-    EX_D_5_ID: Exercise(id=EX_D_5_ID, level="dificil", prompt="...", inputs={}, answers={}, ai_context="..."),
+    EX_D_1_ID: Exercise(
+        id=EX_D_1_ID,
+        level="dificil",
+        prompt="Uma máquina produz peças em ritmo constante. Em 2 horas de funcionamento, ela produziu um total de 100 peças. Em 5 horas, o total subiu para 220 peças. Quantas peças essa máquina terá produzido ao completar 8 horas?",
+        inputs={"Peças": "float"},
+        answers={"Peças": 340},
+        ai_context="O aluno deve primeiro descobrir a função f(x) = ax + b usando os pontos (2, 100) e (5, 220). Calculando o 'a' (delta): (220-100)/(5-2) = 40. Calculando o 'b': 100 = 40*2 + b -> b = 20. Função: f(x) = 40x + 20. Por fim, calcular f(8): 40*8 + 20 = 320 + 20 = 340."
+    ),
+    
+    EX_D_2_ID: Exercise(
+        id=EX_D_2_ID,
+        level="dificil",
+        prompt="Observe o gráfico acima, que mostra uma reta passando pelos pontos (2, 3) e (-1, 9). Calcule a raiz (zero da função) desta reta.",
+        inputs={"x": "float"},
+        answers={"x": 3.5},
+        ai_context="O aluno deve: 1) Achar o 'a': (9-3)/(-1-2) = -2. 2) Achar o 'b' substituindo um ponto: 3 = -2(2) + b -> b = 7. A função é f(x) = -2x + 7. 3) Calcular a raiz: -2x + 7 = 0 -> 2x = 7 -> x = 3.5.",
+        image_path=get_asset_path("exercises/hard/h1.png")
+    ),
+    
+    EX_D_3_ID: Exercise(
+        id=EX_D_3_ID,
+        level="dificil",
+        prompt="Sabendo que a função f(x) = ax + 10 possui sua raiz igual a 5, calcule o valor de f(-2).",
+        inputs={"Resultado": "float"},
+        answers={"Resultado": 14},
+        ai_context="Este é um problema de lógica reversa. Se a raiz é 5, então f(5) = 0. O aluno substitui: a*5 + 10 = 0 -> 5a = -10 -> a = -2. Com a função completa (f(x) = -2x + 10), ele calcula f(-2): -2*(-2) + 10 = 4 + 10 = 14."
+    ),
+    
+    EX_D_4_ID: Exercise(
+        id=EX_D_4_ID,
+        level="dificil",
+        prompt="Uma empresa começa o dia com um saldo negativo de R$ -1.200,00 (custos fixos). Após vender 100 unidades de seu produto, o saldo sobe para R$ -400,00. Quantas unidades a empresa precisa vender no total para atingir o ponto de equilíbrio (saldo zero)?",
+        inputs={"Unidades": "float"},
+        answers={"Unidades": 150},
+        ai_context="O aluno identifica b = -1200. Usa o ponto (100, -400) para achar o 'a': f(100) = a*100 - 1200 = -400 -> 100a = 800 -> a = 8. A função é f(x) = 8x - 1200. Para achar o equilíbrio (raiz): 8x - 1200 = 0 -> 8x = 1200 -> x = 150."
+    ),
+    
+    EX_D_5_ID: Exercise(
+        id=EX_D_5_ID,
+        level="dificil",
+        prompt="Analise o gráfico acima, que contém os pontos (-1, -1) e (2, 5). Determine o valor numérico onde essa reta cortará o eixo vertical Y (Coeficiente Linear).",
+        inputs={"b": "float"},
+        answers={"b": 1},
+        ai_context="O aluno precisa achar o valor de 'b'. Primeiro acha o 'a': (5 - (-1))/(2 - (-1)) = 6/3 = 2. Depois substitui um ponto para achar o 'b': 5 = 2(2) + b -> 5 = 4 + b -> b = 1. A reta corta o eixo Y no 1.",
+        image_path=get_asset_path("exercises/hard/h2.png")
+    ),
 }
 
 EXERCISES_ORDER = {
